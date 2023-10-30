@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6B28EB6E2AEFA92E00A55993 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B28EB6D2AEFA92E00A55993 /* main.cpp */; };
 		6B28EB762AEFAAB800A55993 /* libfbxsdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B28EB752AEFAAB800A55993 /* libfbxsdk.a */; };
+		6B28EB782AEFB2B000A55993 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B28EB772AEFB2A600A55993 /* libxml2.tbd */; };
+		6B28EB7A2AEFB2BA00A55993 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B28EB792AEFB2BA00A55993 /* libiconv.tbd */; };
+		6B28EB7C2AEFB2D600A55993 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B28EB7B2AEFB2D600A55993 /* Foundation.framework */; };
+		6B28EB7E2AEFB2EC00A55993 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B28EB7D2AEFB2EC00A55993 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +31,10 @@
 		6B28EB6A2AEFA92E00A55993 /* SphericalHarmonics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SphericalHarmonics; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B28EB6D2AEFA92E00A55993 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6B28EB752AEFAAB800A55993 /* libfbxsdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfbxsdk.a; path = lib/libfbxsdk.a; sourceTree = "<group>"; };
+		6B28EB772AEFB2A600A55993 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		6B28EB792AEFB2BA00A55993 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6B28EB7B2AEFB2D600A55993 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B28EB7D2AEFB2EC00A55993 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +42,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B28EB7C2AEFB2D600A55993 /* Foundation.framework in Frameworks */,
+				6B28EB7A2AEFB2BA00A55993 /* libiconv.tbd in Frameworks */,
+				6B28EB782AEFB2B000A55993 /* libxml2.tbd in Frameworks */,
 				6B28EB762AEFAAB800A55993 /* libfbxsdk.a in Frameworks */,
+				6B28EB7E2AEFB2EC00A55993 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +81,10 @@
 		6B28EB742AEFAAB800A55993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B28EB7D2AEFB2EC00A55993 /* libz.tbd */,
+				6B28EB7B2AEFB2D600A55993 /* Foundation.framework */,
+				6B28EB792AEFB2BA00A55993 /* libiconv.tbd */,
+				6B28EB772AEFB2A600A55993 /* libxml2.tbd */,
 				6B28EB752AEFAAB800A55993 /* libfbxsdk.a */,
 			);
 			name = Frameworks;
