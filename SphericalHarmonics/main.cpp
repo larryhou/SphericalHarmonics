@@ -156,7 +156,7 @@ FbxMesh* generate(fbxsdk::FbxScene *scene, kernel fn, const char* name) {
     color->SetMappingMode(FbxLayerElement::eByControlPoint);
     color->SetReferenceMode(FbxLayerElement::eDirect);
     for (auto i = 0; i < m; i++) {
-        FbxColor c;
+        FbxColor c(0,0,0,1);
         if (vertice[i].sign == 1) {
             c.mRed   = vertice[i].raidus;
         } else {
