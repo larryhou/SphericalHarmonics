@@ -174,7 +174,7 @@ int main(int argc, const char * argv[]) {
             name[3] = '0' + abs(m);
             
             auto geom = generate(scene, bands[l][m+l], name, l);
-            geom->GetNode()->LclTranslation.Set(FbxVectorTemplate3<double>(m, 0.0, l - static_cast<int>(bands.size())/2));
+            geom->GetNode()->LclTranslation.Set(FbxVectorTemplate3<double>(m, 0.0, static_cast<int>(bands.size())/2-l));
             std::cout << name << std::endl;
         }
     }
