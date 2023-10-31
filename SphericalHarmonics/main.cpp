@@ -132,7 +132,7 @@ double L8P8(double t, double p) {return sqrt(12155/M_PI/2)*3/256*pow(sin(t),8)*c
 double L8M8(double t, double p) {return sqrt(12155/M_PI/2)*3/256*pow(sin(t),8)*cos(8*p);}
 
 
-FbxMesh* generate(fbxsdk::FbxScene *scene, function fn, const char* name);
+FbxMesh* generate(fbxsdk::FbxScene *scene, function fn, const char* name, int l);
 
 int main(int argc, const char * argv[]) {
     
@@ -173,8 +173,8 @@ int main(int argc, const char * argv[]) {
             name[2] = m >= 0 ? 'P' : 'M';
             name[3] = '0' + abs(m);
             
-            auto geom = generate(scene, bands[l][m+l], name);
-            geom->GetNode()->LclTranslation.Set(FbxVectorTemplate3<double>(m*1.0,0.0,(l - static_cast<int>(bands.size())/2)*1.0));
+            auto geom = generate(scene, bands[l][m+l], name, l);
+            geom->GetNode()->LclTranslation.Set(FbxVectorTemplate3<double>(m, 0.0, l - static_cast<int>(bands.size())/2));
             std::cout << name << std::endl;
         }
     }
@@ -185,16 +185,16 @@ int main(int argc, const char * argv[]) {
     return 1;
 }
 
-FbxMesh* generate(fbxsdk::FbxScene *scene, function fn, const char* name) {
+FbxMesh* generate(fbxsdk::FbxScene *scene, function fn, const char* name, int l) {
     auto node = FbxNode::Create(scene, name);
     scene->GetRootNode()->AddChild(node);
     
     auto geom = FbxMesh::Create(scene, node->GetName());
     node->SetNodeAttribute(geom);
     
-    static const int MESH_SEGMENT_COUNT = 40;
-    auto h = MESH_SEGMENT_COUNT * 2;
-    auto n = MESH_SEGMENT_COUNT * 2;
+    static const int MESH_SEGMENT_COUNT = 20;
+    auto h = MESH_SEGMENT_COUNT + l * 20;
+    auto n = MESH_SEGMENT_COUNT + l * 20;
     
     std::vector<vectex> vertice;
     vertice.reserve((h+1)*(n+1));
