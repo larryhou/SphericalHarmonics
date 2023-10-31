@@ -193,8 +193,8 @@ FbxMesh* generate(fbxsdk::FbxScene *scene, function fn, const char* name, int l)
     node->SetNodeAttribute(geom);
     
     static const int MESH_SEGMENT_COUNT = 20;
-    auto h = MESH_SEGMENT_COUNT + l * 20;
     auto n = MESH_SEGMENT_COUNT + l * 20;
+    auto h = n >> 1;
     
     std::vector<vectex> vertice;
     vertice.reserve((h+1)*(n+1));
