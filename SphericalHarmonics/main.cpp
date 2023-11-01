@@ -37,8 +37,8 @@ double L0M0(double t, double p) { return 1.0/sqrt(M_PI)/2; }
 
 //MARK: 01
 double L1P0(double t, double p) { return sqrt(3/M_PI)/2*cos(t); }
-double L1P1(double t, double p) { return sqrt(3/M_PI)/2*sin(t)*cos(p); }
-double L1M1(double t, double p) { return sqrt(3/M_PI)/2*sin(t)*sin(p); }
+double L1P1(double t, double p) { return sqrt(3/M_PI/2)/2*sin(t)*cos(p); }
+double L1M1(double t, double p) { return sqrt(3/M_PI/2)/2*sin(t)*sin(p); }
 
 //MARK: 02
 double L2P0(double t, double p) { return sqrt(5/M_PI)/8*(1 + 3*cos(2*t)); }
